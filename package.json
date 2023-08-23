@@ -1,0 +1,30 @@
+{
+  "name": "7-solutions-assignment-api-data-transformation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build:proto": "npx protoc --ts_opt server_grpc1 --ts_out ./src/protos --proto_path ./ ./*.proto",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuipawarit/7-solutions-assignment-api-data-transformation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuipawarit/7-solutions-assignment-api-data-transformation/issues"
+  },
+  "homepage": "https://github.com/nuipawarit/7-solutions-assignment-api-data-transformation#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.1",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@protobuf-ts/plugin": "^2.9.1",
+    "prettier": "^3.0.2",
+    "ts-node": "^10.9.1"
+  }
+}

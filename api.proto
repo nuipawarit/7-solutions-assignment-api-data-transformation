@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+message Employee {
+    message Department {
+        uint32 male = 1;
+        uint32 female = 2;
+        string ageRange = 3;
+        uint32 ageMode = 4;
+        map<string , uint32> hair = 5;
+        map<string , string> addressUser = 6;
+    }
+
+    map<string, Department> department = 1;
+}
+
+service EmployeeService {
+    rpc GetEmployee(google.protobuf.Empty) returns (Employee);
+}
